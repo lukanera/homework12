@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="row">
+    <div class="col col-4">
+        <img src="{{ product.image.url }}" class="card-img-top" alt="...">
+    </div>
+    <div class="col col-8">
+        <div class="d-flex">
+            <div>{{ product.views }}</div>
+            <div class="ms-5">{{ product.create_date }}</div>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="bold card-text fw-bold"> {{ product.price }} </p>
+            <p class="card-text">{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
